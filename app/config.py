@@ -4,6 +4,7 @@ class Config:
     """
     HEADLINES_API_BASE_URL = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=api key={}'
 
+
 class ProdConfig(Config):
     """
     Production configuration child class
@@ -11,6 +12,7 @@ class ProdConfig(Config):
         Config: The parent configuration class with General configuration settings
     """
     pass
+
 
 class DevConfig(Config):
     """
