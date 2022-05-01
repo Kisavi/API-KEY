@@ -23,3 +23,21 @@ def get_headlines():
             headlines_results = process_results(headlines_results_list)
 
     return headlines_results
+
+
+def process_results(headlines_list):
+    headlines_results = []
+    for item in headlines_list:
+        name = item.get('name')
+        author = item.get('author')
+        url = item.get('url')
+        urlToImage = item.get('urlToImage')
+        title = item.get('title')
+        description = item.get('description')
+        publishedAt = item.get('publishedAt')
+
+        if urlToImage:
+            headline_object = News(name,author,url,urlToImage,title,description,publishedAt)
+            headlines_results.append(headline_object)
+    return headlines_results
+
