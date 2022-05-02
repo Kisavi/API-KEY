@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
-{% block content %}
-<h3>Top Headlines</h3>
 
-       {{ macro.displayNewsHeadlines(headlines) }}
+{% block content %}
+<h3>News Sources</h3>
+
+ {{ macro.displayNewsSources(sources) }}
 
 {% endblock %}
