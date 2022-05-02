@@ -1,8 +1,25 @@
 {% macro displayNewsHeadlines(headlines) %}
 
-    {% for headline in headlines %}
-        <li>{{ headline.title }}</li>
-    {% endfor %}
+<div class container>
+    <div class="row">
+        {% for headline in headlines %}
+      <div class="col-md-4 d-flex justify-content-center mb-6">
+        <div class="card" style="width: 40rem;">
+         <img src="{{ headline.urlToImage }}" class="card-img-top" alt="..." style="width: 40rem;">
+          <div class="card-body">
+         <p class="card-text source">{{ headline.source.name}}</p>
+         <a href="{{ url }}">
+          <h2 class="card-title"><b> {{ headline.title }} </b></h2>
+         </a>
+        <p class="card-text">{{ headline.description }}</p>
+        <p class="card-text">Author: {{ headline.author }}</p>
+        <p class="card-text">Date Published: {{ headline.publishedAt }}</p>
+        </div>
+       </div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
 
 {% endmacro %}
 

@@ -32,7 +32,7 @@ def get_headlines():
 def process_headlines(get_headlines_response):
     headlines_results = []
     for headline_item in get_headlines_response:
-        name = headline_item.get('name')
+        source = headline_item.get('source')
         author = headline_item.get('author')
         url = headline_item.get('url')
         urlToImage = headline_item.get('urlToImage')
@@ -41,7 +41,7 @@ def process_headlines(get_headlines_response):
         publishedAt = headline_item.get('publishedAt')
 
         if urlToImage and author and title:
-            headline_object = Headlines(author, title, description, url, urlToImage, publishedAt)
+            headline_object = Headlines(source, author, title, description, url, urlToImage, publishedAt)
             headlines_results.append(headline_object)
             
     return headlines_results
