@@ -10,7 +10,7 @@
           <div class="card-body">
          <h4 class="card-text source">{{ headline.source.name}}</h4>
          <a href="{{ url }}">
-          <h2 class="card-title"><b> {{ headline.title | truncate(50)}} </b></h2>
+          <h3 class="card-title"><b> {{ headline.title | truncate(50)}} </b></h3>
          </a>
         <p class="card-text">{{ headline.description  | truncate(100)}}</p>
         <p class="card-text">Author: {{ headline.author | truncate(25) }}</p>
@@ -32,7 +32,7 @@
     <div class="row">
         {% for source in sources %}
         <div class="col-md-4 " style="display: flex">
-          <div class="card mb-4" style="width: 18rem;">
+          <div class="card mb-4" style="width: 30rem;">
             <div class="card-body">
                <a href="{{ source.url }}" target="_blank" class="btn btn-primary">
                   <h5 class="card-title">{{ source.name }}</h5>
