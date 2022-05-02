@@ -9,3 +9,7 @@ def index():
     return render_template('index.html', headlines=news_headlines)
 
 
+@app.route('/sources')
+def source():
+    news_sources = get_sources()
+    return render_template('sources.html', source=news_sources)
