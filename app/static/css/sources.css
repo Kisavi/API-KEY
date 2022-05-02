@@ -1,0 +1,33 @@
+.source-heading {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.source {
+    /* border: 1px solid black; */
+    margin-right: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    border: 1px solid black;
+    max-width: 40rem;
+}
+
+.head {
+    background: rgb(219, 219, 219);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+p {
+    padding: 0 1rem;
+    font-size: large;
+}
+
+
+

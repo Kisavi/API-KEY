@@ -21,7 +21,7 @@ def get_headlines():
     with urllib.request.urlopen(get_headlines_url) as url:
         get_headlines_data = url.read()
         get_headlines_response = json.loads(get_headlines_data)
-        print(get_headlines_response)
+        # print(get_headlines_response)
 
         headlines_results = None
 
@@ -63,7 +63,7 @@ def get_sources():
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
-        print(get_sources_response)
+        # print(get_sources_response)
 
         sources_results = None
 

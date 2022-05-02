@@ -1,0 +1,16 @@
+.top-headlines {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.headline {
+    margin-bottom: 2em;
+}
+
+.card {
+    border: 1px solid rgb(171, 171, 171);
+}
+
+.card-body {
+    padding: 1rem;
+}
