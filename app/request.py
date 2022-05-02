@@ -40,7 +40,7 @@ def process_headlines(get_headlines_response):
         description = headline_item.get('description')
         publishedAt = headline_item.get('publishedAt')
 
-        if urlToImage and author:
+        if urlToImage and author and title:
             headline_object = Headlines(author, title, description, url, urlToImage, publishedAt)
             headlines_results.append(headline_object)
             
