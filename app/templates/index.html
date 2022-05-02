@@ -1,6 +1,9 @@
- {% import 'macros.html' as macro %}
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+{% block content %}
 <h3>Headlines</h3>
 
    <li>
        {{ macro.displayNewsHeadlines(headlines) }}
    </li>
+{% endblock %}
