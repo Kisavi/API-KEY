@@ -1,12 +1,15 @@
 from app import app
 import urllib.request, json
 from .models import headlines
+from .models.headlines import Sources
 
 Headlines = headlines.Headlines  # variable name News of file news of class News
 
 api_key = app.config['NEWS_API_KEY']
 
 base_url = app.config['HEADLINES_API_BASE_URL']
+
+sources_url = app.config['SOURCES_API_BASE_URL']
 
 
 def get_headlines():
@@ -30,6 +33,9 @@ def get_headlines():
 
 
 def process_headlines(get_headlines_response):
+    """
+    method that processes response from the api call
+    """
     headlines_results = []
     for headline_item in get_headlines_response:
         source = headline_item.get('source')
@@ -52,7 +58,7 @@ def get_sources():
     method that gets various news sources
     """
 
-    get_sources_url = base_url.format(api_key)
+    get_sources_url = sources_url.format(api_key)
 
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
@@ -66,3 +72,22 @@ def get_sources():
             sources_results = process_sources(sources_results_list)
 
     return sources_results
+
+
+def process_sources(get_sources_response):
+    """
+      method that processes response from the api call
+    """
+    sources_results = []
+
+    for source_item in get_sources_response:
+        name = source_item.get('name')
+        url = source_item.get('url')
+        description = source_item.get('description')
+
+        if name and description and url:
+            source_object = Sources(name, description, url)
+            sources_results.append(source_object)
+
+    return sources_results
+
