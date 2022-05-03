@@ -1,0 +1,14 @@
+.navbar-brand {
+    font-size: large;
+    font-weight: 900;
+}
+li a{
+    /* color: red !important; */
+    font-size: large;
+}
+
+li a:hover {
+    color: black !important;
+    background: white !important;
+    border-radius: 0.3em;
+}
