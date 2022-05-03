@@ -1,8 +1,5 @@
 import unittest
-from models import headlines
-
-Headlines = headlines.Headlines
-Sources = headlines.Sources
+from app.models import Headlines, Sources
 
 
 # test for headlines class
@@ -45,7 +42,3 @@ class SourcesTest(unittest.TestCase):
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_sources, Sources))
-
-
-if __name__ == '__main__':
-    unittest.main()

@@ -1,15 +1,16 @@
-from app import app
 import urllib.request, json
-from .models import headlines
-from .models.headlines import Sources
+from .models import Headlines, Sources
 
-Headlines = headlines.Headlines  # variable name News of file news of class News
 
-api_key = app.config['NEWS_API_KEY']
+api_key = None
 
-base_url = app.config['HEADLINES_API_BASE_URL']
+base_url = None
 
-sources_url = app.config['SOURCES_API_BASE_URL']
+def configure_request(app):
+    global api_key,base_url, sources_url
+    api_key = app.config['NEWS_API_KEY']
+    base_url = app.config['HEADLINES_API_BASE_URL']
+
 
 
 def get_headlines():
