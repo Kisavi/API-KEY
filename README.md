@@ -17,8 +17,8 @@
 * flask
 ## Cloning
 * On your terminal, run the following commands:
-* $ git clone https://github.com/Kisavi/API-KEY.git
-* $ cd API-KEY
+* $ git clone https://github.com/Kisavi/News-app.git
+* $ cd News-app
 * Create a virtual environment $ py -m venv env
 * Activate the virtual environment $ source\scripts\activate
 * Install Dependancies $ pip install -r requirements.txt
