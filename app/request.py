@@ -1,16 +1,18 @@
 import urllib.request, json
 from .models import Headlines, Sources
 
-
 api_key = None
 
 base_url = None
 
+sources_url = None
+
+
 def configure_request(app):
-    global api_key,base_url, sources_url
+    global api_key, base_url, sources_url
     api_key = app.config['NEWS_API_KEY']
     base_url = app.config['HEADLINES_API_BASE_URL']
-
+    sources_url = app.config['SOURCES_API_BASE_URL']
 
 
 def get_headlines():
@@ -91,4 +93,3 @@ def process_sources(get_sources_response):
             sources_results.append(source_object)
 
     return sources_results
-
