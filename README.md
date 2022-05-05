@@ -19,10 +19,10 @@
 * On your terminal, run the following commands:
 * $ git clone https://github.com/Kisavi/News-app.git
 * $ cd News-app
-* Create a virtual environment $ py -m venv env
-* Activate the virtual environment $ source\scripts\activate
+* Create a virtual environment $ pv -m venv --without-pip virtual
+* Activate the virtual environment $ source virtual/bin/activate
 * Install Dependancies $ pip install -r requirements.txt
-* Run the application $ python3 run.py
+* Run the application $ ./start.sh
 ## Development
 #### Want to make a contribution to enhance an existing module or fix a bug? Great!
 * Fork the repo
